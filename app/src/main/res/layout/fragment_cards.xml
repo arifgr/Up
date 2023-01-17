@@ -47,6 +47,113 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPagerCards"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:padding="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/carViewTopBar" />
+
+    <me.relex.circleindicator.CircleIndicator3
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:ci_drawable="@drawable/circle_indicator_round"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewPagerCards" />
+
+    <TextView
+        android:id="@+id/textViewBalanceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/balance"
+        android:textAllCaps="true"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/indicator" />
+
+    <TextView
+        android:id="@+id/textViewTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:visibility="invisible"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewBalanceTitle" />
+
+    <TextView
+        android:id="@+id/textViewBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:drawableStart="@drawable/ic_lira_32"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTime" />
+
+    <ImageButton
+        android:id="@+id/imageButtonRefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:src="@android:drawable/stat_notify_sync"
+        app:layout_constraintBottom_toBottomOf="@id/textViewTime"
+        app:layout_constraintStart_toEndOf="@id/textViewTime"
+        app:layout_constraintTop_toTopOf="@id/textViewTime"
+        app:tint="@color/black" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutPendingBalance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewBalance">
+
+        <TextView
+            android:id="@+id/textViewPendingBalanceTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:text="@string/pending_balance"
+            android:textAllCaps="true"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewBalanceTitle" />
+
+        <TextView
+            android:id="@+id/textViewPendingBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:drawableStart="@drawable/ic_lira_32"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewTime" />
+    </LinearLayout>
+
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardViewMap"
         android:layout_width="wrap_content"

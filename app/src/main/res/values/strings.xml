@@ -8,4 +8,7 @@
     <string name="manage">MANAGE</string>
     <string name="pay">PAY</string>
     <string name="where_do_i_use">WHERE DO I USE?</string>
+    <string name="balance">balance</string>
+    <string name="time">%d seconds ago</string>
+    <string name="pending_balance">pending balance</string>
 </resources>

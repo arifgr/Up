@@ -3,19 +3,19 @@ package com.example.up.data.remote.dto
 import com.example.up.domain.model.Card
 
 data class CardDto(
-    val balanceDto: BalanceDto?,
+    val balance: BalanceDto?,
     val cvv: String?,
     val image: String?,
     val number: String?,
-    val pendingBalanceDto: PendingBalanceDto?
+    val pendingBalance: PendingBalanceDto?
 )
 
 fun CardDto.toCard(): Card {
     return Card(
-        balance = balanceDto?.toBalance(),
+        balance = balance?.toBalance(),
         cvv = cvv,
         image = image,
         number = number,
-        pendingBalance = pendingBalanceDto?.toPendingBalance()
+        pendingBalance = pendingBalance?.toPendingBalance()
     )
 }
